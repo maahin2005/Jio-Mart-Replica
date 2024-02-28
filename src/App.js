@@ -1,10 +1,13 @@
-import React from 'react';
-import { ChakraProvider, theme, Text } from '@chakra-ui/react';
+import { ChakraProvider, theme } from '@chakra-ui/react';
+import './App.css';
 
+import Navbar from './components/Navbar';
+import CatogeryNavbar from './components/CatogeryNavbar';
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <Text textAlign={'center'}>JIO MART REPLICA BY MAHIN</Text>
+      <Navbar />
+      <CatogeryNavbar />
     </ChakraProvider>
   );
 }
