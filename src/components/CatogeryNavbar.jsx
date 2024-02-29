@@ -1,11 +1,4 @@
-import {
-  Flex,
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  Text,
-} from '@chakra-ui/react';
+import { Flex, Menu, MenuButton, MenuList, MenuItem } from '@chakra-ui/react';
 import React from 'react';
 
 function CatogeryNavbar() {

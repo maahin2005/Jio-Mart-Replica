@@ -2,7 +2,6 @@ import React from 'react';
 import {
   Drawer,
   DrawerBody,
-  DrawerFooter,
   DrawerHeader,
   DrawerOverlay,
   DrawerContent,
@@ -184,7 +183,7 @@ function DrawerComponent({ isOpen, onClose }) {
               </a>
             </Flex>
             <Divider />
-            <Text margin={2} fontSize={4} mt={10} mb={7}>
+            <Text margin={2} fontSize={'1rem'} mt={10} mb={7}>
               Should you encounter any bugs, glitches, lack of functionality,
               delayed deliveries, billing errors or other problems on the
               website, please email us on <b>cs@jiomart.com</b>

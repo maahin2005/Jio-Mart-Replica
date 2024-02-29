@@ -1,6 +1,5 @@
 import React from 'react';
 import {
-  Box,
   Flex,
   Button,
   useDisclosure,
@@ -11,7 +10,6 @@ import {
 
 import { FiMenu } from 'react-icons/fi';
 import DrawerComponent from './Drawer';
-// import { IoLocationSharp } from 'react-icons';
 import { ImLocation } from 'react-icons/im';
 import InputComponent from './InputComponent';
 import SignInCompo from './SignInCompo';
