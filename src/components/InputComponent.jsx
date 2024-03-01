@@ -29,6 +29,7 @@ function InputComponent() {
       <Spacer />
       <Box cursor={'pointer'}>
         <img
+          alt="input=compo"
           src="https://www.jiomart.com/assets/ds2web/jds-icons/list-icon.svg"
           width={30}
         />

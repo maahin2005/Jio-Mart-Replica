@@ -59,6 +59,7 @@ function DrawerComponent({ isOpen, onClose }) {
               >
                 <img
                   bg={'transparent'}
+                  alt="img-d"
                   color="white"
                   src="https://www.jiomart.com/assets/ds2web/jds-icons/angle-left-icon.svg"
                 />

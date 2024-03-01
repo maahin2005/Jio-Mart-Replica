@@ -26,9 +26,9 @@ function Footer() {
       as="footer"
       display={{ base: 'none', md: 'flex' }}
       height={'520px'}
+      width={'100vw'}
       bg={'#f5f5f5'}
-      mt={40}
-      px={10}
+      // px={10}
       py={10}
       justifyContent={'space-evenly'}
     >

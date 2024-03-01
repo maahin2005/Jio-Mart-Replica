@@ -10,12 +10,15 @@ import {
 
 import { FiMenu } from 'react-icons/fi';
 import DrawerComponent from './Drawer';
-import { ImLocation } from 'react-icons/im';
 import InputComponent from './InputComponent';
 import SignInCompo from './SignInCompo';
+import { useNavigate } from 'react-router-dom';
+import PopoverLocation from './PopoverLocation';
 
 function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+
+  const homePageNavigation = useNavigate('');
 
   return (
     <Flex
@@ -43,26 +46,16 @@ function Navbar() {
           fontSize={25}
           alignSelf={'center'}
           display={{ base: 'none', md: 'inline' }}
+          cursor={'pointer'}
+          onClick={() => {
+            homePageNavigation('/');
+          }}
         >
           JioMart
         </Heading>
         <Spacer />
-        <Button
-          bg={'transparent'}
-          display={{ base: 'none', md: 'flex' }}
-          color="white"
-          width={'max-content'}
-          borderRadius={'20px'}
-          _hover={{ bg: '#0c5273' }}
-        >
-          <ImLocation fontSize={20} />
-          <Text color={'white'} fontSize={15}>
-            Deliver to{' '}
-            <Text display={'inline'} font-weight={700}>
-              Mumbai 400020
-            </Text>
-          </Text>
-        </Button>
+
+        <PopoverLocation />
       </Flex>
       <Flex height="70px" align={'center'} gap={{ base: 1, md: 3 }}>
         <InputComponent />
@@ -74,7 +67,10 @@ function Navbar() {
           borderRadius={'100%'}
           _hover={{ bg: '#0c5273' }}
         >
-          <img src=" https://www.jiomart.com/assets/ds2web/jds-icons/cart-icon.svg" />
+          <img
+            src=" https://www.jiomart.com/assets/ds2web/jds-icons/cart-icon.svg"
+            alt="nav-1"
+          />
         </Button>
         <SignInCompo />
       </Flex>

@@ -1,33 +1,48 @@
 import { Flex, Menu, MenuButton, MenuList, MenuItem } from '@chakra-ui/react';
-import React from 'react';
+import React, { useState } from 'react';
+import {
+  GroceriesList,
+  Home_KitchenList,
+  FashionList,
+  ElectronicsList,
+  BeautyList,
+  Home_ImprovementList,
+  SportsList,
+  WellnessList,
+} from './helpers/dropDown_items';
 
 function CatogeryNavbar() {
   const categoryArray = [
     'Groceries',
-    'Premium Fruits',
     'Home & Kitchen',
     'Fashion',
     'Electronics',
     'Beauty',
-    'Jewellery',
     'Home Improvement',
     'Sports, Toys & Luggage',
+    'Wellness',
   ];
 
-  function CatogeriesText({ catName }) {
-    return (
-      <Menu>
-        <MenuButton fontWeight={600} fontSize={'10px'}>
-          {catName}
-        </MenuButton>
-        <MenuList color="black">
-          <MenuItem>Item 1</MenuItem>
-          <MenuItem>Item 2</MenuItem>
-          <MenuItem>Item 3</MenuItem>
-        </MenuList>
-      </Menu>
-    );
-  }
+  const innerList = [
+    GroceriesList,
+    Home_KitchenList,
+    FashionList,
+    ElectronicsList,
+    BeautyList,
+    Home_ImprovementList,
+    SportsList,
+    WellnessList,
+  ];
+
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const handleMouseEnter = index => {
+    setOpenIndex(index);
+  };
+
+  const handleMouseLeave = () => {
+    setOpenIndex(null);
+  };
 
   return (
     <Flex
@@ -40,7 +55,36 @@ function CatogeryNavbar() {
       gap={{ md: 5, lg: 8 }}
     >
       {categoryArray.map((catName, i) => (
-        <CatogeriesText catName={catName} key={i} />
+        <Menu
+          key={i}
+          isOpen={openIndex === i}
+          onClose={() => setOpenIndex(null)}
+        >
+          <MenuButton
+            variant="ghost"
+            fontWeight={600}
+            fontSize={'10px'}
+            onMouseEnter={() => handleMouseEnter(i)}
+            onMouseLeave={handleMouseLeave}
+          >
+            {catName}
+          </MenuButton>
+
+          <MenuList
+            width={'min-content'}
+            color="black"
+            onMouseEnter={() => handleMouseEnter(i)}
+            onMouseLeave={handleMouseLeave}
+            transition="none"
+            key={i}
+          >
+            {innerList[i].map((el, j) => (
+              <MenuItem key={j} fontWeight={600} color={'gray.600'}>
+                {el}
+              </MenuItem>
+            ))}
+          </MenuList>
+        </Menu>
       ))}
     </Flex>
   );

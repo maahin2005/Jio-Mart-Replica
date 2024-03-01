@@ -3,6 +3,8 @@ import React from 'react';
 import FirstSlider from './FirstSlider';
 import MiddleHomeCompo from './MiddleHomeCompo';
 import SecTwoHome from './SecTwoHome';
+import AboveFooter from './AboveFooter';
+import SecThreeHome from './SecThreeHome';
 
 function Home() {
   return (
@@ -10,6 +12,8 @@ function Home() {
       <FirstSlider />
       <MiddleHomeCompo />
       <SecTwoHome />
+      <SecThreeHome />
+      <AboveFooter />
     </Box>
   );
 }
