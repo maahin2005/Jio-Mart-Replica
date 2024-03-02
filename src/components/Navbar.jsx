@@ -1,12 +1,5 @@
 import React from 'react';
-import {
-  Flex,
-  Button,
-  useDisclosure,
-  Heading,
-  Spacer,
-  Text,
-} from '@chakra-ui/react';
+import { Flex, Button, useDisclosure, Heading, Spacer } from '@chakra-ui/react';
 
 import { FiMenu } from 'react-icons/fi';
 import DrawerComponent from './Drawer';

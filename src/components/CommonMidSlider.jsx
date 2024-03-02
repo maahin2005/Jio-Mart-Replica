@@ -54,7 +54,7 @@ function CommonMidSlider({ array }) {
     infinite: true,
     speed: 500,
     slidesToShow: 5,
-    slidesToScroll: 0.5,
+    slidesToScroll: 1,
     autoplaySpeed: 3000,
     autoplay: true,
     prevArrow: <SamplePrevArrow />,
@@ -72,8 +72,8 @@ function CommonMidSlider({ array }) {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          slidesToShow: 2,
+          slidesToScroll: 2,
           initialSlide: 2,
           prevArrow: null,
           nextArrow: null,
@@ -102,10 +102,14 @@ function CommonMidSlider({ array }) {
 
   return (
     <Flex>
-      <Box className="slider-container" width={'90%'} margin={'auto'}>
+      <Box
+        className="slider-container"
+        width={{ base: '70%', md: '90%' }}
+        margin={'auto'}
+      >
         <Slider ref={sliderRef} {...settings}>
           {array.map((el, i) => (
-            <Box key={i}>
+            <Box key={i} width={{ base: '70%', md: '90%' }}>
               <img src={el} alt={i} style={{ cursor: 'pointer' }} />
             </Box>
           ))}

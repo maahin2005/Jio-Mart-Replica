@@ -18,7 +18,12 @@ function ParallelTwoImgSlide1() {
 
   return (
     <>
-      <Box className="slider-container" width={'99%'} mt={3}>
+      <Box
+        className="slider-container"
+        width={'99%'}
+        mt={3}
+        display={{ base: 'none', md: 'block' }}
+      >
         <Slider {...settings}>
           <div>
             <img

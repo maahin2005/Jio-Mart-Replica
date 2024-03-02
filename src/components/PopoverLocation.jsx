@@ -3,8 +3,6 @@ import {
   Popover,
   PopoverTrigger,
   PopoverContent,
-  Box,
-  PopoverBody,
   Text,
   PopoverArrow,
   PopoverCloseButton,
@@ -35,7 +33,11 @@ function PopoverLocation() {
           </Text>
         </Button>
       </PopoverTrigger>
-      <PopoverContent width="500px" p={5}>
+      <PopoverContent
+        width="500px"
+        p={5}
+        display={{ base: 'none', md: 'flex' }}
+      >
         <PopoverArrow />
         <PopoverCloseButton />
         <Heading fontSize={30}>Select Delivery Location</Heading>

@@ -7,12 +7,13 @@ function SignIn() {
 
   return (
     <Box
-      display={{ base: 'block', md: 'flex' }}
+      display={{ base: 'none', md: 'flex' }}
+      // display={{ base: 'block', md: 'flex' }}
       justifyContent={'space-around'}
       align={'center'}
       p={20}
     >
-      <Box width="max-content">
+      <Box width="max-content" display={{ base: 'none', md: 'flex' }}>
         <img
           width={'70%'}
           src="https://www.jiomart.com/images/cms/wysiwyg/cms/1677147547_pp.png"
@@ -21,6 +22,7 @@ function SignIn() {
       </Box>
 
       <Box
+        display={{ base: 'none', md: 'block' }}
         height={'max-content'}
         alignSelf={'center'}
         boxShadow={'2xl'}

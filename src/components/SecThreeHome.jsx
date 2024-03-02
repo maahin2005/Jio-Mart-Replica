@@ -30,7 +30,7 @@ function SecThreeHome() {
         gap={{ base: 0, md: 5 }}
         ml={{ base: 0, md: 10 }}
         mb={5}
-        display={{ base: 'block', md: 'flex' }}
+        display={{ base: 'none', md: 'flex' }}
       >
         <img
           style={{
