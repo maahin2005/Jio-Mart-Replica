@@ -68,7 +68,7 @@ function DrawerComponent({ isOpen, onClose }) {
 
             <Text color={'white'}>Hello</Text>
             <Spacer />
-            <SignInCompo />
+            <SignInCompo onClose={onClose} />
           </Flex>
         </DrawerHeader>
         <DrawerBody>

@@ -50,9 +50,12 @@ function CatogeryNavbar() {
       height={'40px'}
       bg={'#0c5273'}
       color={'white'}
-      fontSize={'10px'}
+      fontSize={'1rem'}
       justify="center"
       gap={{ md: 5, lg: 8 }}
+      position={'sticky'}
+      zIndex={5}
+      top={'70px'}
     >
       {categoryArray.map((catName, i) => (
         <Menu
@@ -63,7 +66,7 @@ function CatogeryNavbar() {
           <MenuButton
             variant="ghost"
             fontWeight={600}
-            fontSize={'10px'}
+            fontSize={'1rem'}
             onMouseEnter={() => handleMouseEnter(i)}
             onMouseLeave={handleMouseLeave}
           >

@@ -14,6 +14,12 @@
 
 - CatogeryNavbar
 
+# AllRoutes ---
+
+- AllRoutes
+  - Home
+  - SignIn
+
 # Main Home ---
 
 - Home

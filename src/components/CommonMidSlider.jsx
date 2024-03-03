@@ -1,10 +1,11 @@
-import { Box, Flex } from '@chakra-ui/react';
+import { Box, Flex, Image } from '@chakra-ui/react';
 import React, { useRef } from 'react';
 
 import Slider from 'react-slick';
 // import { IoIosArrowDropright } from 'react-icons/io';
 import { IoIosArrowDropright } from 'react-icons/io';
 import { IoIosArrowDropleft } from 'react-icons/io';
+import { Link } from 'react-router-dom';
 
 function CommonMidSlider({ array }) {
   const sliderRef = useRef(null);
@@ -106,11 +107,22 @@ function CommonMidSlider({ array }) {
         className="slider-container"
         width={{ base: '70%', md: '90%' }}
         margin={'auto'}
+        mt={0}
       >
         <Slider ref={sliderRef} {...settings}>
           {array.map((el, i) => (
             <Box key={i} width={{ base: '70%', md: '90%' }}>
-              <img src={el} alt={i} style={{ cursor: 'pointer' }} />
+              <Link to="/products">
+                <Image
+                  src={el}
+                  alt={i}
+                  style={{ cursor: 'pointer' }}
+                  _hover={{
+                    transform: 'scale(1.06)', // Increase size on hover
+                    transition: 'transform 0.3s ease-in', // Smooth transition
+                  }}
+                />
+              </Link>
             </Box>
           ))}
         </Slider>

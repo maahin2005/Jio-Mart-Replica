@@ -59,22 +59,30 @@ function SecTwoHome() {
         Top Deals of 6 Max Saving Days{' '}
       </Text>
       <CommonDetailsCardSlider arrayOfObj={firstRowObj} />
-      <Text fontWeight={'black'} p={{ base: 3, md: 10 }}>
-        Shop From Top Categories{' '}
-      </Text>
-      <CommonMidSlider array={firstRowArray} />
+      <Box>
+        <Text
+          fontWeight={'black'}
+          mt={{ base: 5, md: 12 }}
+          ml={{ base: 5, md: 12 }}
+        >
+          Shop From Top Categories{' '}
+        </Text>
+        <CommonMidSlider array={firstRowArray} />
+      </Box>
 
       <MidTwoImgSlider />
-      <Text fontWeight={'black'} p={{ base: 3, md: 10 }}>
+      <Text
+        fontWeight={'black'}
+        mt={{ base: 5, md: 12 }}
+        ml={{ base: 5, md: 12 }}
+      >
         Shop From Top Categories{' '}
       </Text>
-      <Box mt={10}>
+      <Box>
         <CommonMidSlider array={secondRowArray} />
-      </Box>
-      <Box mt={10}>
+
         <CommonMidSlider array={thirdRowArray} />
-      </Box>
-      <Box mt={10}>
+
         <CommonMidSlider array={forthRowArray} />
       </Box>
       <Box>
@@ -97,20 +105,32 @@ function SecTwoHome() {
       <Box mt={10}>
         <CommonMidSlider array={fifthRowArray} />
       </Box>
-      <Text fontWeight={'black'} p={{ base: 3, md: 10 }}>
+      <Text
+        fontWeight={'black'}
+        mt={{ base: 5, md: 12 }}
+        ml={{ base: 5, md: 12 }}
+      >
         Trending Smartphones
       </Text>
       <CommonDetailsCardSlider arrayOfObj={secondRowObj} />
       <Box>
         <ParallelThreeSlider array={_secondRowArray} />
       </Box>
-      <Text fontWeight={'black'} p={{ base: 3, md: 8 }}>
+      <Text
+        fontWeight={'black'}
+        mt={{ base: 5, md: 12 }}
+        ml={{ base: 5, md: 12 }}
+      >
         Apparels
       </Text>
       <Box>
         <CommonMidSlider array={sixthRowArray} />
       </Box>
-      <Text fontWeight={'black'} p={{ base: 3, md: 8 }}>
+      <Text
+        fontWeight={'black'}
+        mt={{ base: 5, md: 12 }}
+        ml={{ base: 5, md: 12 }}
+      >
         Footwear and Accessories
       </Text>
       <Box>
@@ -119,26 +139,42 @@ function SecTwoHome() {
       <Box>
         <ParallelThreeSlider array={_thirdRowArray} />
       </Box>
-      <Text fontWeight={'black'} p={{ base: 3, md: 8 }}>
+      <Text
+        fontWeight={'black'}
+        mt={{ base: 5, md: 12 }}
+        ml={{ base: 5, md: 12 }}
+      >
         Kitchen Must Haves
       </Text>
       <Box>
         <CommonMidSlider array={eighthRowArray} />
       </Box>
-      <Text fontWeight={'black'} p={{ base: 3, md: 10 }}>
+      <Text
+        fontWeight={'black'}
+        mt={{ base: 5, md: 12 }}
+        ml={{ base: 5, md: 12 }}
+      >
         Top Picks
       </Text>
       <CommonDetailsCardSlider arrayOfObj={thirdRowObj} />
       <Box>
         <ParallelThreeSlider array={_forthRowArray} />
       </Box>
-      <Text fontWeight={'black'} p={{ base: 3, md: 8 }}>
+      <Text
+        fontWeight={'black'}
+        mt={{ base: 5, md: 12 }}
+        ml={{ base: 5, md: 12 }}
+      >
         Home & Lifestyle
       </Text>
       <Box>
         <CommonMidSlider array={ninthRowArray} />
       </Box>
-      <Text fontWeight={'black'} p={{ base: 3, md: 8 }}>
+      <Text
+        fontWeight={'black'}
+        mt={{ base: 5, md: 12 }}
+        ml={{ base: 5, md: 12 }}
+      >
         Home Essentials
       </Text>
       <Box>
@@ -147,26 +183,42 @@ function SecTwoHome() {
       <Box>
         <ParallelThreeSlider array={_fifthRowArray} />
       </Box>
-      <Text fontWeight={'black'} p={{ base: 3, md: 8 }}>
+      <Text
+        fontWeight={'black'}
+        mt={{ base: 5, md: 12 }}
+        ml={{ base: 5, md: 12 }}
+      >
         Kitchen Specials
       </Text>
       <Box>
         <CommonMidSlider array={_11RowArray} />
       </Box>
-      <Text fontWeight={'black'} pl={{ base: 3, md: 8 }}>
+      <Text
+        fontWeight={'black'}
+        mt={{ base: 5, md: 12 }}
+        ml={{ base: 5, md: 12 }}
+      >
         Electronics Hub
       </Text>
       <Box>
         <CommonMidSlider array={_12RowArray} />
       </Box>
-      <Text fontWeight={'black'} pl={{ base: 1, md: 8 }}>
+      <Text
+        fontWeight={'black'}
+        mt={{ base: 5, md: 10 }}
+        ml={{ base: 5, md: 12 }}
+      >
         Top picks - Electronics
       </Text>
       <CommonDetailsCardSlider arrayOfObj={forthRowObj} isButton={false} />
       <Box>
         <ParallelThreeSlider array={_sixthRowArray} />
       </Box>
-      <Text fontWeight={'black'} pl={{ base: 1, md: 8 }}>
+      <Text
+        fontWeight={'black'}
+        mt={{ base: 5, md: 12 }}
+        ml={{ base: 5, md: 12 }}
+      >
         Kitchen Essentials
       </Text>
       <Box>
