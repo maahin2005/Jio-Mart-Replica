@@ -8,8 +8,9 @@ function Footer() {
         display={'block'}
         fontWeight={600}
         color={'#242424'}
-        padding={2.5}
+        // padding={2.5}
         pl={1.5}
+        pr={1.5}
         width={'max-content'}
         variant={'unstyled'}
         textAlign={'left'}
@@ -28,7 +29,8 @@ function Footer() {
       height={'520px'}
       width={'100vw'}
       bg={'#f5f5f5'}
-      // px={10}
+      px={10}
+      pl={'100px'}
       py={10}
       justifyContent={'space-evenly'}
     >

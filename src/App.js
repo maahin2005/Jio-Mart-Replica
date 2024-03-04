@@ -10,8 +10,17 @@ import AllRoutes from './Routes/AllRoutes.jsx';
 
 import { useLocation } from 'react-router-dom';
 
+import { useEffect } from 'react';
+
 function App() {
   const accoundLocation = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+    });
+  }, []);
 
   return (
     <ChakraProvider theme={theme}>

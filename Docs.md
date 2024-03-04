@@ -28,3 +28,9 @@
     - ParallelTwoImgSlide1
   - SecTwoHome
     - MidTwoImgSlider
+
+# Cart page --
+
+- CartPage
+  - empty cart
+  - cartItem

@@ -65,7 +65,7 @@ function InputComponent() {
         </PopoverTrigger>
         <PopoverContent
           p={3}
-          width={{ base: 100, md: 460 }}
+          width={{ base: 300, md: 460 }}
           mt={3}
           borderRadius={30}
         >
@@ -73,7 +73,7 @@ function InputComponent() {
             <Text fontWeight={700}>Discover More</Text>
           </PopoverHeader>
           <PopoverBody>
-            <SimpleGrid columns={{ base: 2, md: 4 }} gap={3}>
+            <SimpleGrid columns={{ base: 2, md: 4 }} gap={{ base: 1, md: 3 }}>
               <Button
                 variant={'unstyled'}
                 border={'1px solid #ccc'}

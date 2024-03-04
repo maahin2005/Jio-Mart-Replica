@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 
 import {
   Box,
@@ -38,6 +38,13 @@ function SignIn() {
       });
     }
   };
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+    });
+  }, []);
 
   if (isAuth) {
     return <Navigate to="/" />;

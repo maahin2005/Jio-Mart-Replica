@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useEffect } from 'react';
 import {
   Drawer,
   DrawerBody,
@@ -15,21 +15,34 @@ import {
   Divider,
 } from '@chakra-ui/react';
 import SignInCompo from './SignInCompo';
+import { Link, useLocation } from 'react-router-dom';
 
 function DrawerComponent({ isOpen, onClose }) {
-  function ListOfDrawer({ imgSrc, tagName }) {
+  const location = useLocation();
+
+  useEffect(() => {
+    onClose();
+  }, [location.pathname, onClose]);
+
+  function ListOfDrawer({ imgSrc, tagName, pathName }) {
+    const handleCloseDrawer = useCallback(() => {
+      onClose();
+    }, [onClose]);
+
     return (
-      <HStack
-        mb={3}
-        mt={5}
-        cursor={'pointer'}
-        _hover={{ textDecoration: 'underline' }}
-      >
-        <img src={imgSrc} alt={tagName} />
-        <Text fontWeight={600} color={'#242424'}>
-          {tagName}
-        </Text>
-      </HStack>
+      <Link to={pathName} onClick={handleCloseDrawer}>
+        <HStack
+          mb={3}
+          mt={5}
+          cursor={'pointer'}
+          _hover={{ textDecoration: 'underline' }}
+        >
+          <img src={imgSrc} alt={tagName} />
+          <Text fontWeight={600} color={'#242424'}>
+            {tagName}
+          </Text>
+        </HStack>
+      </Link>
     );
   }
 
@@ -76,11 +89,13 @@ function DrawerComponent({ isOpen, onClose }) {
             <ListOfDrawer
               imgSrc="https://www.jiomart.com/assets/ds2web/jds-icons/home-icon.svg"
               tagName="Home"
+              pathName="/"
             />
             <hr />
             <ListOfDrawer
               imgSrc="https://www.jiomart.com/assets/ds2web/jds-icons/category-icon.svg"
               tagName="Shop By Category"
+              pathName="/products"
             />
             <hr />
             <Text pt={5} fontWeight={700}>
@@ -89,21 +104,25 @@ function DrawerComponent({ isOpen, onClose }) {
             <ListOfDrawer
               imgSrc="https://www.jiomart.com/assets/ds2web/jds-icons/my-order-icon.svg"
               tagName="My Orders"
+              pathName="/cart"
             />
             <hr />
             <ListOfDrawer
               imgSrc="https://www.jiomart.com/assets/ds2web/jds-icons/my-list-viewicon.svg"
               tagName="My List"
+              pathName="/cart"
             />
             <hr />
             <ListOfDrawer
               imgSrc="https://www.jiomart.com/assets/ds2web/jds-icons/wishlist-icon.svg"
               tagName="Wishlist"
+              pathName="/cart"
             />
             <hr />
             <ListOfDrawer
               imgSrc="https://www.jiomart.com/assets/ds2web/jds-icons/wallet-icon.svg"
               tagName="JioMart Wallet"
+              pathName="/cart"
             />
             <hr />
             <Text fontWeight={700} pt={5}>
@@ -112,16 +131,19 @@ function DrawerComponent({ isOpen, onClose }) {
             <ListOfDrawer
               imgSrc="https://www.jiomart.com/assets/ds2web/jds-icons/offer-store-icon.svg"
               tagName="Offer Store"
+              pathName="/"
             />
             <hr />
             <ListOfDrawer
               imgSrc="https://www.jiomart.com/assets/ds2web/jds-icons/my-list-newicon.svg"
               tagName="Coupon Store"
+              pathName="/"
             />
             <hr />
             <ListOfDrawer
               imgSrc="https://www.jiomart.com/assets/ds2web/jds-icons/gift-store-icon.svg"
               tagName="Gift Store"
+              pathName="/"
             />
             <hr />
             <Text fontWeight={700} pt={5}>
@@ -130,26 +152,31 @@ function DrawerComponent({ isOpen, onClose }) {
             <ListOfDrawer
               imgSrc="https://www.jiomart.com/assets/ds2web/jds-icons/faqs-icon.svg"
               tagName="FAQs/Need Help"
+              pathName="/faqs"
             />
             <hr />
             <ListOfDrawer
               imgSrc="https://www.jiomart.com/assets/ds2web/jds-icons/about-us-icon.svg"
               tagName="About Us"
+              pathName="/about-us"
             />
             <hr />
             <ListOfDrawer
               imgSrc="https://www.jiomart.com/assets/ds2web/jds-icons/contact-us-icon.svg"
               tagName="Contact Us"
+              pathName="/contact-us"
             />
             <hr />
             <ListOfDrawer
               imgSrc="https://www.jiomart.com/assets/ds2web/jds-icons/guide-icon.svg"
               tagName="Guide"
+              pathName="/faqs"
             />
             <hr />
             <ListOfDrawer
               imgSrc="https://www.jiomart.com/assets/ds2web/jds-icons/caution-notice.svg"
               tagName="Caution Notice"
+              pathName="/faqs"
             />
             <hr />
           </Box>
